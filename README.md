@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# 📚 Book Stan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Book Stan** é um diário de leitura digital feito com React, onde o usuário pode cadastrar, visualizar, editar e excluir livros lidos. Este projeto foi desenvolvido para a disciplina de Desenvolvimento de Sistemas Front-End com foco na construção de um CRUD estático.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📦 Pré-requisitos
 
-### `npm start`
+Antes de executar o projeto, certifique-se de ter o **Node.js** instalado na máquina.  
+Você pode verificar com:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+node -v
+npm -v
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Caso não tenha, baixe em: https://nodejs.org/
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🚀 Como executar o projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone ou extraia o projeto:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+   git clone <link-do-repo>  ou  extraia o .zip
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Abra o terminal na pasta do projeto e instale as dependências:**
 
-### `npm run eject`
+   ```
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Inicie o projeto:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Acesse no navegador:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```
+   http://localhost:3000
+   ```
 
-## Learn More
+> Obs: A pasta `node_modules` foi removida, pois não deve ser enviada na entrega. Ela será recriada ao rodar `npm install`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🧩 Componentes
 
-### Code Splitting
+### 🔹 `NavBar`
+Barra de navegação fixa no topo da aplicação, contendo links para as páginas principais: Início, Sobre, Cadastro e Livros.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🔹 `BookForm`
+Formulário utilizado para cadastrar novos livros lidos. Contém os seguintes campos obrigatórios:
+- Título
+- Autor(a)
+- Gênero
+- Data de leitura
 
-### Analyzing the Bundle Size
+Inclui validação básica, garantindo que nenhum campo seja deixado em branco.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🔹 `BookList`
+Lista todos os livros cadastrados, exibindo suas informações e fornecendo botões para **editar** (via prompt) e **excluir** cada item.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🗂️ Estrutura do projeto
 
-### Advanced Configuration
+```
+src/
+├── components/
+│   ├── NavBar/
+│   │   └── NavBar.js
+│   ├── BookForm/
+│   │   └── BookForm.js
+│   └── BookList/
+│       └── BookList.js
+├── App.js
+├── index.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🧠 Decisões de desenvolvimento
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Optei por usar `react-router-dom` para implementar a navegação entre páginas.
+- O estado dos livros é mantido via `useState`, de forma estática (em memória), como proposto para esta fase do projeto.
+- A edição foi feita de forma simplificada com `prompt()` para facilitar a implementação da fase 1, sem necessidade de múltiplas rotas ou formulários mais complexos.
+- O estilo foi feito inline para manter o foco no funcionamento da aplicação e na componentização.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desenvolvido por **Larissa Albuquerque** 🦋
