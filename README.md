@@ -24,7 +24,7 @@ Caso não tenha, baixe em: https://nodejs.org/
 1. **Clone ou extraia o projeto:**
 
    ```
-   git clone <link-do-repo>  ou  extraia o .zip
+   git clone https://github.com/lalbuquerques/book-stan.git  ou  extraia o .zip
    ```
 
 2. **Abra o terminal na pasta do projeto e instale as dependências:**
