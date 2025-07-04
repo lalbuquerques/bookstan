@@ -3,6 +3,9 @@
 
 **Book Stan** é um diário de leitura digital feito com React, onde o usuário pode cadastrar, visualizar, editar e excluir livros lidos. Este projeto foi desenvolvido para a disciplina de Desenvolvimento de Sistemas Front-End com foco na construção de um CRUD dinâmico conectado a uma API REST.
 
+### Funcionamento do Site
+![Funcionamento](./assets/funcionamento.gif)
+
 ---
 
 ## 📦 Pré-requisitos
