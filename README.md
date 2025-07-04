@@ -156,7 +156,7 @@ A aplicação se conecta à [readingJournal-api](https://github.com/adsPucrsOnli
 
 ## 🖼️ Imagens (prints de tela)
 
-```md
+
 ### Página Inicial
 ![Página Inicial](./assets/home.png)
 
@@ -168,7 +168,6 @@ A aplicação se conecta à [readingJournal-api](https://github.com/adsPucrsOnli
 
 ### Informação do Site
 ![Sobre](./assets/sobre.png)
-```
 
 ---
 
