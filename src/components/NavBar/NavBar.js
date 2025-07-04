@@ -1,17 +1,23 @@
+// src/components/NavBar/NavBar.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 
-const NavBar = () => {
+function NavBar() {
   return (
-    <nav style={{ padding: '1rem', backgroundColor: '#f4f4f4' }}>
-      <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none' }}>
-        <li><Link to="/">Início</Link></li>
-        <li><Link to="/sobre">Sobre</Link></li>
-        <li><Link to="/cadastro">Cadastro</Link></li>
-        <li><Link to="/livros">Livros</Link></li>
-      </ul>
-    </nav>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Book Stan 📚
+        </Typography>
+        <Button color="inherit" component={Link} to="/">Início</Button>
+        <Button color="inherit" component={Link} to="/livros">Lista de Livros</Button>
+        <Button color="inherit" component={Link} to="/cadastro">Cadastrar</Button>
+        <Button color="inherit" component={Link} to="/sobre">Sobre</Button>
+      </Toolbar>
+    </AppBar>
   );
-};
+}
 
 export default NavBar;
